@@ -3,6 +3,7 @@ import './App.css';
 import { AppBar, Typography, Tabs, Tab } from '@mui/material';
 import Customerlist from './components/Customerlist';
 import Traininglist from './components/Traininglist';
+import Schedule from './components/Schedule';
 
 function App() {
   const [tabIndex, setTabIndex] = useState(0);
@@ -21,6 +22,7 @@ function App() {
           onChange={tabChange}>
             <Tab style={{backgroundColor:'white'}} label='Asiakkaat' />
             <Tab style={{backgroundColor:'white'}} label='Harjoitukset' />
+            <Tab style={{backgroundColor:'white'}} label='Kalenteri' />
           </Tabs>
       </AppBar>
       
@@ -33,6 +35,11 @@ function App() {
         {tabIndex === 1 && (
           <div>
             <Traininglist />
+          </div>
+        )}
+        {tabIndex === 2 && (
+          <div>
+            <Schedule />
           </div>
         )}
       </div>

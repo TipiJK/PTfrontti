@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react';
 import { DataGrid } from '@mui/x-data-grid';
 import moment from 'moment/moment';
 import EditTraining from './EditTraining';
-import ReactDOM from 'react-dom';
 
 export default function Traininglist() {
 
